@@ -4,7 +4,8 @@ Given that we have a "customer" resource/model in our web server,
 
 1 - How would you design the routes of your server based on REST convention? List them with VERB and /route
 
-
+PUT /movies/:id
+DELETE /movies/:id
 GET    /movies            
 GET   /movies/:id         
 GET     /movies/new           
@@ -46,7 +47,7 @@ before update
 after update
 before destroy
 after destroy
-- for example , we can  put a slug for posts if they don't have one, after create  the post.
+- for example , we can  put a slug for posts if they don't have one, before create  the post.
 
 (It will be Great if you explain the hook again. I am not good in it.)
 
@@ -63,8 +64,9 @@ we use standard of sequelize in our project. validate: {
 7 - Why do we use bcrypt. Write down 3 reasons why we use it if you can.
 
 to produce a very secured password that can not be hacked.
-it is a method of crypt package.
+it is a method of crypto package.
 it uses a very complicated algoritm to create hash.
+it  compare two hashes to see if they are from the same source
 
 
 
@@ -78,6 +80,7 @@ minify, eliminate all white-spaces from files. obfuscating, changes  variables n
 10 - What are the 3 reasons that makes Gulp a good choice as an asset build library?
 
 it uses streams
+it is easy to configure
 we can use the ready packages with that, and we don't need to write them by ourselves.
 compile scss
 watching the changes
