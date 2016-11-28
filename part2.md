@@ -4,35 +4,34 @@ Given that we have a "customer" resource/model in our web server,
 
 1 - How would you design the routes of your server based on REST convention? List them with VERB and /route
 
-/movies              index.pug
-/movies/:id           show.pug
-/movies/new           new.pug
-/movies/:id/edit      edit.pug
+/movies              
+/movies/:id         
+/movies/new           
+/movies/:id/edit      
 
 2 - Which pages would require templates, and how would you name them? List them with /route and template-name.extension
+actually I did not get completely, what do you want in this example. It is not clear for me.
 
 index.js
 
-views/movies/index.pug
-views/movies/show.pug
-views/movies/new.pug
-views/movies/edit.pug
-
+/movies              
+/movies/:id         
+/movies/new           
+/movies/:id/edit   
 
 
 =========
 
 3 - What is a database constraint? Name the 3 types of database constraints you have learned.
 we define a limitation for the column in database.
-unique: true or false, not null: true or false, not empty :true or false
+unique: true or false, not null: true or false, foreign key
 
 
 
 4 - What is a foreign key? Given that you have a Factory that has many cars and car that belongs to a factory, What would be your foreign key column?
 
--it is column that we put in the table to make a relationship with the other tables.
--the relationship is one to many ,
-the foreign key will be carId in the factory table.
+-  It is used to link two tables and it is a column , we put in one of the table that its value matches with the primary key of the other table.
+the foreign key will be factoryId in the Cars table.
 
 
 5 - List all the model lifecycle hooks you have learned from sequelize and explain them briefly if necessary.
@@ -45,6 +44,7 @@ before update
 after update
 before destroy
 after destroy
+- for example , we can  put a slug for posts if they don't have one, after create  the post.
 
 (It will be Great if you explain the hook again. I am not good in it.)
 
@@ -59,11 +59,16 @@ we use standard of sequelize in our project. validate: {
                                                         } will check the email format.
 
 7 - Why do we use bcrypt. Write down 3 reasons why we use it if you can.
+
 to produce a very secured password that can not be hacked.
+it is a method of crypt package.
+it uses a very complicated algoritm to create hash.
+
 
 
 8 - What is a flash message?
-They are the pop up windows , which we use for application-level validations.
+They are notification messages , to show users that an action was successful or was wrong.
+for example if we put correct format of email.
 
 9 - What is the difference between minifying and obfuscating JavaScript?
 minify, eliminate all white-spaces from files. obfuscating, changes  variables names to shorter one.
