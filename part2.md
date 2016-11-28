@@ -4,20 +4,22 @@ Given that we have a "customer" resource/model in our web server,
 
 1 - How would you design the routes of your server based on REST convention? List them with VERB and /route
 
-/movies              
-/movies/:id         
-/movies/new           
-/movies/:id/edit      
+
+GET    /movies            
+GET   /movies/:id         
+GET     /movies/new           
+GET     /movies/:id/edit  
+POST /movies    
 
 2 - Which pages would require templates, and how would you name them? List them with /route and template-name.extension
-actually I did not get completely, what do you want in this example. It is not clear for me.
+
 
 index.js
 
-/movies              
-/movies/:id         
-/movies/new           
-/movies/:id/edit   
+/movies       index.pug           
+/movies/:id   show.pug      
+/movies/new       new.pug    
+/movies/:id/edit   edit.pug
 
 
 =========
