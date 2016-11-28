@@ -23,7 +23,8 @@ and we can recognize easily which website , we want to see.
 when we send something to server
 through the form , to make it  readable for server we use middleware and it will be saved in req.body object.
 
-### 6 - What is the difference in terms of parsing a data received from a web form with POST or an AJAX POST request? I don't understand this one.
+### 6 - What is the difference in terms of parsing a data received from a web form with POST or an AJAX POST request?
+
 
 ### 7 - Why do we use methodOverride middleware ?
 because the form html by default , doesn't accept put action and delete action, we use this middleware, to make put and delete works on the form.
